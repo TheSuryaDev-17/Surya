@@ -1,19 +1,9 @@
-print("--- SEHI Billing ---")
-item = input("Saman: ")
-price = float(input("Rate: "))
-qty = float(input("Vajan: "))
-total = price * qty
-print("Total Bill: Rs.", total)
-while True:
-    print("\n--- SEHI Billing System ---")
-    item = input("Saman (ya 'exit' likhein band karne ke liye): ")
-    
-    if item.lower() == 'exit':
-        print("Business Tool band ho raha hai. Bye!")
-        break
-        
-    price = float(input("Rate: "))
-    qty = float(input("Vajan: "))
-    
-total = price * qty
-    print(f"Billa for {item}: Rs. {total}")
+def calculate_gst(amount):
+    gst_rate = 0.18  # Assuming GST rate is 18%
+    gst = amount * gst_rate
+    return gst
+
+# Example usage
+if __name__ == '__main__':
+    amount = 1000
+    print(f'GST on {amount} is: {calculate_gst(amount)}')
